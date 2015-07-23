@@ -14,9 +14,7 @@ int main(int argc, char* argv[])
     ll base;
     ll exponent;
     ll modulus;
-    
     //prompting user for data
-    
     printf("Enter the desired base: \n");
     scanf("%lld", &base);
     
@@ -37,17 +35,12 @@ ll modularExponentiation(ll base, ll exponent, ll modulo)
     //initializes binary variable
     ll binaryExponent;
     binaryExponent = convertToBinary(exponent);
-    
     //defines the length of the binary string through the implementation of logarithms
-    
     const int binaryLength = log(binaryExponent) + 1;
-    
     //allocates the memory to a character array
     char binaryStr[binaryLength];
-    
     //sets the buffer to convert the long long binary to a string 
     sprintf(binaryStr, "%lld", binaryExponent);
-    
     //declaration of finalProduct
     long finalProduct;
     finalProduct = 1;
