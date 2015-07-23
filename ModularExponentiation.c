@@ -18,15 +18,12 @@ int main(int argc, char* argv[])
     //prompting user for data
     
     printf("Enter the desired base: \n");
-
     scanf("%lld", &base);
     
     printf("Enter the desired exponent: \n");
-    
     scanf("%lld", &exponent);
     
     printf("Enter the desired modulus: \n");
-    
     scanf("%lld", &modulus);
     
     printf("%lld\n", modularExponentiation(base, exponent, modulus));
@@ -39,7 +36,6 @@ ll modularExponentiation(ll base, ll exponent, ll modulo)
 {
     //initializes binary variable
     ll binaryExponent;
-    
     binaryExponent = convertToBinary(exponent);
     
     //defines the length of the binary string through the implementation of logarithms
@@ -81,7 +77,6 @@ ll calculateModularMultiplier(ll base, ll exponent, ll modulus)
     {
         return base % modulus;
     }
-    
     //recursive call
     return (calculateModularMultiplier(base, exponent / 2, modulus) % 19 * calculateModularMultiplier(base, exponent / 2, modulus) % 19) % modulus;
 }
